@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Fit Again</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background" scroll="false">
+
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full *ngFor="let p of pages" (click)="openPage(p)"> {{p.title}} </button>
+</ion-footer>
+ 
+

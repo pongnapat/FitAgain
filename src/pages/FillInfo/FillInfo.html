@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Fill Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Fill Information</h3>
+  <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+          <ion-option value="Female">Female</ion-option>
+          <ion-option value="Male">Male</ion-option>
+      </ion-select>
+  </ion-item>
+ <ion-item>
+      <ion-label>BirthDate</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="BirthDate"></ion-datetime>
+ </ion-item>
+
+
+ <ion-item>
+      <ion-label>height</ion-label>
+      <ion-input type="number" [(ngModel)]="height"></ion-input>
+ </ion-item>
+
+ <ion-item>
+      <ion-label>weight</ion-label>
+      <ion-input type="number" [(ngModel)]="weight"></ion-input>
+ </ion-item>
+
+<button ion-button icon-left *ngFor="let p of pageback" (click)="openPage(p)">
+    <ion-icon name='arrow-back' ></ion-icon> Back
+</button>
+<button ion-button icon-right *ngFor="let p of pageforward" (click)="openPage(p)">
+    Next  <ion-icon name='arrow-forward'></ion-icon>
+</button>
+
+
+</ion-content>
+
+

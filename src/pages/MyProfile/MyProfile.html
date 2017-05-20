@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="item item-avatar" align="center" style="background: #00c5e1; color: white; padding: 30px 0px; ">
+    <img src="https://i1.sndcdn.com/avatars-000025260433-spkkeb-t500x500.jpg" height="150" width="150" border="5" style="border-radius: 50%;">
+    <h1>{{username}}</h1>
+    <p style="color: white;">Gender: {{gender}}</p>
+  </div>
+  <h2 style="text-align: center;">
+      Goal:  <font color="#419df4">{{goal}} Kcal</font><br>
+      <br>
+      Current<br>
+      <font color="{{documentdiv}}">{{currentKcal}}</font>
+  </h2>
+  <div style="align-content: center">
+  <ion-item>
+    <ion-label color="primary" floating>Activity: {{activitytype}} ({{KcalActivity}} cal. per hour)</ion-label>
+    <ion-input type="number" [(ngModel)]='hour'></ion-input>
+  </ion-item>
+  </div>
+  <div style="text-align: center;">
+    <button ion-button round (click)="activity()">Submit Activity</button>
+  </div>
+</ion-content>
+
+<!--https://codepen.io/CreativeJuiz/pen/DKsjm-->

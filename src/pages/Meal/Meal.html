@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meal</ion-title>
+    <ion-buttons end>
+     <button ion-button icon-only (click)="addMeal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h1 style="text-align: center;">Your Goal: <font color="#41a6f4">{{goal}}</font></h1>
+  <h1 style="text-align: center;">Your Cal: <font color="{{textColor}}">{{NowcurrentKcal}}</font></h1>
+  <h6 style="text-align: center; margin-top: 30px;">Meal: History</h6>
+  <ion-list>
+    <ion-item *ngFor="let Meal of Mealuser | async">
+      <ion-thumbnail item-left> 
+       <img src="{{ Meal.img }}" height="256" width="256">
+      </ion-thumbnail>
+      {{Meal.name}}<p style="float: right;">{{Meal.cal}} Cal.</p><br>
+      <p style="float: right;">Amount: {{Meal.amount}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

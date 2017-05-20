@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Goal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h3>Goal</h3>
+ <ion-item>
+      <ion-label>Set Goal</ion-label>
+      <ion-input type="number" [(ngModel)]="goal"></ion-input>
+ </ion-item>
+
+<button ion-button icon-left *ngFor="let p of pageback" (click)="openPage(p)">
+    <ion-icon name='arrow-back' ></ion-icon> Back
+</button>
+<button ion-button icon-right *ngFor="let p of pageforward" (click)="openPage(p)">
+    Next  <ion-icon name='arrow-forward'></ion-icon>
+</button>
+
+</ion-content>

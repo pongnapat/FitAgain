@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>EditMeal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>EditMeal</h3>
+  <ion-item>
+   <ion-label color="primary" stacked>Name</ion-label>
+   <ion-input type="text" placeholder="Input your meal name" value='Name' [(ngModel)]='Name'></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-label color="primary" stacked>Description</ion-label>
+   <ion-input type="text" placeholder="Input your meal's' description" value='Description' [(ngModel)]='Description'></ion-input>
+  </ion-item>
+  
+  <ion-item>
+   <ion-label color="primary" stacked>Kcal</ion-label>
+   <ion-input type="number" placeholder="Input Kcal of your meal" value='Kcal' [(ngModel)]='Kcal'></ion-input>
+  </ion-item>
+
+  
+   <button ion-button full *ngFor="let p of pages" (click)="openPage(p)">
+    Add
+  </button>
+</ion-content>

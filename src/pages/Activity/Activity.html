@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Activity</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h3>Activity</h3>
+<button *ngFor="let item of items | async" ion-button (click)=addToDB(item.name,item.kcal)>{{item.name}}</button>
+
+</ion-content>
+
+<ion-footer>
+  
+
+</ion-footer>

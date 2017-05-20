@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Register</h3>
+  <span *ngIf="error">{{ error }}</span>
+  <ion-item>
+   <ion-label color="primary" stacked>Email</ion-label>
+   <ion-input type="text" placeholder="Input your email" [(ngModel)]='email'></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-label color="primary" stacked>Password</ion-label>
+   <ion-input type="password" placeholder="Input your password" [(ngModel)]='password'></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-label color="primary" stacked>Confirm Your Password</ion-label>
+   <ion-input type="password" placeholder="Input your password again" [(ngModel)]='conpassword'></ion-input>
+  </ion-item>
+   <button ion-button (click)="register()">Register</button>
+   <button ion-button (click)="goBack()">Back</button>
+</ion-content>
